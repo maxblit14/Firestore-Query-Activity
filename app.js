@@ -186,12 +186,6 @@ updateTeamDetails("Barcelona", {
 updateTopScorers("FC Barcelona", "Puyol", "Deco");
 
 // Task 4
-// Combined updates for jersey colors
-const jerseyUpdates = [
-  { teamName: "Real Madrid FC", color: { home: "White", away: "Purple" } },
-  { teamName: "FC Barcelona", color: { home: "Red", away: "Pink" } },
-];
-
 // Update jersey colors in Firestore
 
 let jerseyColors = {
@@ -221,10 +215,7 @@ db.collection("teams")
           console.log("Jersey colors for Real Madrid FC updated successfully.");
         });
     }
-  })
-  .catch((error) =>
-    console.error("Error updating Real Madrid FC jersey colors:", error)
-  );
+  });
 
 // Updating jersey colors for FC Barcelona
 db.collection("teams")
@@ -242,10 +233,7 @@ db.collection("teams")
           console.log("Jersey colors for FC Barcelona updated successfully.");
         });
     }
-  })
-  .catch((error) =>
-    console.error("Error updating FC Barcelona jersey colors:", error)
-  );
+  });
 
 // Updating Real Madrid FC's away jersey color to Purple
 db.collection("teams")
@@ -263,10 +251,7 @@ db.collection("teams")
           console.log("Real Madrid FC's away jersey color updated to Purple.");
         });
     }
-  })
-  .catch((error) =>
-    console.error("Error updating Real Madrid FC's away jersey color:", error)
-  );
+  });
 
 // Updating FC Barcelona's away jersey color to Pink
 db.collection("teams")
@@ -284,7 +269,4 @@ db.collection("teams")
           console.log("FC Barcelona's away jersey color updated to Pink.");
         });
     }
-  })
-  .catch((error) =>
-    console.error("Error updating FC Barcelona's away jersey color:", error)
-  );
+  });
